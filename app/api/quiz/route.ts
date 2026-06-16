@@ -29,7 +29,7 @@ export async function POST() {
       ${fullDocumentText}
     `;
 
-    const GENERATE_ENDPOINT = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=${process.env.GOOGLE_API_KEY}`;
+const GENERATE_ENDPOINT = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=${process.env.GOOGLE_API_KEY}`;
 
     // 3. Hit the REST endpoint with a strict responseSchema definition
     const response = await fetch(GENERATE_ENDPOINT, {
