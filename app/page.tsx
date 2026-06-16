@@ -6,7 +6,7 @@ import ChatInterface from './components/ChatInterface';
 import SummaryGenerator from './components/SummaryGenerator';
 import QuizGenerator from './components/QuizGenerator';
 import LearningDashboard from './components/LearningDashboard';
-
+import StudyRecommendations from './components/StudyRecommendations';
 export default function Home() {
   const { data: session, status } = useSession();
 
@@ -55,6 +55,7 @@ export default function Home() {
       {/* Main Dashboard Content */}
       <div className="max-w-4xl mx-auto space-y-8 px-4">
         <LearningDashboard />
+        <StudyRecommendations /> {/* <-- Added here */}
         <PdfUploader />
         <SummaryGenerator />
         <QuizGenerator />
