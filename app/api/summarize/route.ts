@@ -34,7 +34,8 @@ export async function POST() {
     `;
 
     // 4. Call Gemini 1.5 Flash using the exact same bulletproof REST API
-    const GENERATE_ENDPOINT = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${process.env.GOOGLE_API_KEY}`;
+    const GENERATE_ENDPOINT =
+  `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${process.env.GOOGLE_API_KEY}`;
 
     const response = await fetch(GENERATE_ENDPOINT, {
       method: 'POST',
