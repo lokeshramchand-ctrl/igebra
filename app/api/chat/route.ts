@@ -72,8 +72,8 @@ export async function POST(request: Request) {
       3. Source references: (List the file names you used)
     `;
 // 5. Generate the Answer using Direct REST API (Bypassing SDK bugs)
-    const GENERATE_ENDPOINT = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-latest:generateContent?key=${process.env.GOOGLE_API_KEY}`;
-
+const GENERATE_ENDPOINT =
+  `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${process.env.GOOGLE_API_KEY}`;
     const chatResponse = await fetch(GENERATE_ENDPOINT, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
